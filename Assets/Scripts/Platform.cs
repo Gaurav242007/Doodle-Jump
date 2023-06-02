@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Platformer : MonoBehaviour
+public class Platform : MonoBehaviour
 {
     public float jumpForce = 10f;
 
