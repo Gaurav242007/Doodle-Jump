@@ -126,6 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 10
+  CoinPrefab: {fileID: 1499356536932770506, guid: 1ef74c8dbfc0f8e4c80245ced0866f20, type: 3}
+  hasCoin: 0
+  coinOffset: {x: 0, y: 0, z: 0}
 --- !u!251 &-3940202293616032133
 PlatformEffector2D:
   m_ObjectHideFlags: 0

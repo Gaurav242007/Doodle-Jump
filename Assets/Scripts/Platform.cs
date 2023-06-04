@@ -6,13 +6,13 @@ public class Platform : MonoBehaviour
 {
     public float jumpForce = 10f;
 
+
     void OnCollisionStay2D(Collision2D collision)
     {
 
         // if coming from top
         if (collision.relativeVelocity.y <= 0f)
         {
-
             Rigidbody2D rb = collision.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
@@ -20,6 +20,7 @@ public class Platform : MonoBehaviour
                 velocity.y = jumpForce;
                 rb.velocity = velocity;
             }
+            GameManager.IncreaseScore();
         }
 
     }
