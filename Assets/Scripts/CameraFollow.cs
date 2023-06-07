@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform target;
     public float smoothSpeed = .3f;
+    public float loseGameDistance = 10f;
 
     // to be called after all update function
     void LateUpdate()
@@ -15,6 +16,14 @@ public class CameraFollow : MonoBehaviour
             Vector3 newPos = new Vector3(transform.position.x, target.position.y, transform.position.z);
             // for smoothing 
             transform.position = newPos;
+        }
+    }
+
+    void Update()
+    {
+        if ((transform.position.y - target.position.y) > loseGameDistance)
+        {
+            FindObjectOfType<GameManager>().EndGame(transform.position);
         }
     }
 }

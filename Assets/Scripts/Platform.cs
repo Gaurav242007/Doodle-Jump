@@ -20,6 +20,7 @@ public class Platform : MonoBehaviour
                 velocity.y = jumpForce;
                 rb.velocity = velocity;
             }
+            FindObjectOfType<AudioManager>().PlayJump();
             GameManager.IncreaseScore();
         }
 
