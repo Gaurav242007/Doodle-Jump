@@ -49,3 +49,10 @@ MonoBehaviour:
   levelWidth: 3
   minY: 0.3
   maxY: 1.5
+  CoinPrefabs:
+  - {fileID: 1499356536932770506, guid: 1ef74c8dbfc0f8e4c80245ced0866f20, type: 3}
+  - {fileID: 8268046857656740725, guid: 9c36ed153c76d48439c19e848555c2e6, type: 3}
+  - {fileID: 8268046857656740725, guid: cdd3e25720067b14cad65fde2381cfd7, type: 3}
+  coinPrabability: 0
+  coinOffset: {x: 0, y: 0, z: 0}
+  WinFlag: {fileID: 0}

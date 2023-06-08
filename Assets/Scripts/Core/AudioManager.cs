@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource leveComplete;
     public AudioSource coinPick;
     public AudioSource Jump;
+    public AudioSource SelectBtn;
 
     public void PlayLoseSfx()
     {
@@ -27,5 +28,10 @@ public class AudioManager : MonoBehaviour
     public void PlayJump()
     {
         Jump.Play();
+    }
+
+    public void PlayOnSelect()
+    {
+        SelectBtn.Play();
     }
 }

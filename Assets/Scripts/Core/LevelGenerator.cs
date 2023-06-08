@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
     public GameObject platformPrefab;
+    public GameObject jetpackPlatform;
 
     public int numberOfPlatforms = 200;
     public float levelWidth = 3f;
@@ -24,12 +25,20 @@ public class LevelGenerator : MonoBehaviour
             spawnPosition.y += Random.Range(minY, maxY);
             spawnPosition.x = Random.Range(-levelWidth, levelWidth);
             GameObject platformPref = Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
-            if (i + 1 == numberOfPlatforms)
+
+            // instantiating jetpack platform for every 40 jump
+            if ((i + 1) % 40 == 0 && (numberOfPlatforms - i) > 50)
+            {
+                GameObject jetpackPrefab = Instantiate(jetpackPlatform, spawnPosition, Quaternion.identity);
+                continue;
+            }
+            else if (i + 1 == numberOfPlatforms)
             {
                 Vector3 newPos = platformPref.transform.position + coinOffset;
                 Instantiate(WinFlag, newPos, Quaternion.identity, platformPref.transform);
                 return;
             }
+
             else if ((i + 1) % coinPrabability == 0)
             {
                 int coinIndex = Random.Range(0, CoinPrefabs.Length);
