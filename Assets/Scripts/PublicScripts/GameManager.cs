@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Over");
         audioManager.PlayOnLevelComplete();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(MainMenu);
     }
 
     public void PauseGame()
