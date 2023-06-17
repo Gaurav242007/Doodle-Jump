@@ -22,18 +22,25 @@ public class GameManager : MonoBehaviour
 
     [Header("Optional")]
     public static string playerName;
+    private int levelReached;
+    public int levelToUnlock;
+    public string NextLevel;
+    private int TotalCoins;
 
 
     void Start()
     {
+        levelReached = PlayerPrefs.GetInt("levelReached", 1);
         PauseMenuUi.SetActive(false);
         Coins = startCoins;
         Score = startScore;
         playerName = PlayerPrefs.GetString("playerName", "Doodle");
+        TotalCoins = PlayerPrefs.GetInt("Coins", 0);
     }
 
     public static void IncreaseCoins(int value, int CoinMultiplier)
     {
+        Debug.Log(Coins);
         if (value > 0)
             Coins += value * CoinMultiplier;
     }
@@ -56,6 +63,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame(Vector3 pos)
     {
+        UpdateCoins();
         audioManager.PlayLoseSfx();
         StartCoroutine(LoadTheScene());
     }
@@ -68,9 +76,11 @@ public class GameManager : MonoBehaviour
 
     public void LevelComplete()
     {
-        Debug.Log("Game Over");
+        UpdateCoins();
         audioManager.PlayOnLevelComplete();
-        SceneManager.LoadScene(MainMenu);
+        if (!(levelReached > levelToUnlock))
+            PlayerPrefs.SetInt("levelReached", levelToUnlock);
+        SceneManager.LoadScene(NextLevel);
     }
 
     public void PauseGame()
@@ -91,6 +101,12 @@ public class GameManager : MonoBehaviour
     {
         audioManager.PlayOnSelect();
         SceneManager.LoadScene(MainMenu);
+    }
+
+    void UpdateCoins()
+    {
+        int finalAmount = TotalCoins + Coins;
+        PlayerPrefs.SetInt("Coins", finalAmount);
     }
 
 }

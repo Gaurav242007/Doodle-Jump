@@ -563,7 +563,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -781,7 +781,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.20392159, g: 0.21176472, b: 0.23529413, a: 1}
+  m_BackGroundColor: {r: 0.9686275, g: 0.93725497, b: 0.9058824, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -886,7 +886,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &539180933
 Canvas:
   m_ObjectHideFlags: 0
@@ -2292,11 +2292,11 @@ MonoBehaviour:
   hasGameEnded: 0
   PauseMenuUi: {fileID: 1820857242}
   audioManager: {fileID: 1326678826}
-  currentLevel: 1
+  currentLevel: 2
   MainMenu: MainMenu
   levelReached: 0
   levelToUnlock: 2
-  NextLevel: Level02
+  NextLevel: MainMenu
 --- !u!114 &1687132537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2921,7 +2921,7 @@ PrefabInstance:
       objectReference: {fileID: 1334337002109649784, guid: bff7072dd4c134c45a94ee7a5dfa60c9, type: 3}
     - target: {fileID: 3292949830095490113, guid: 29a8ca0ca411f7f4d95a2b3a40c373af, type: 3}
       propertyPath: numberOfPlatforms
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3292949830095490113, guid: 29a8ca0ca411f7f4d95a2b3a40c373af, type: 3}
       propertyPath: CoinPrefabs.Array.size

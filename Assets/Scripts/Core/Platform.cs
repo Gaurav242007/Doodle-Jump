@@ -9,7 +9,6 @@ public class Platform : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-
         // if coming from top
         if (collision.relativeVelocity.y <= 0f)
         {

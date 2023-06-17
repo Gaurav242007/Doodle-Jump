@@ -26,8 +26,9 @@ public class Settings : MonoBehaviour
     {
         if (defaultPlayerName.Trim() != "")
         {
-            Debug.Log("Hi");
+            FindObjectOfType<AudioManager>().PlayOnSelect();
             PlayerPrefs.SetString("playerName", playerName);
+            gameObject.SetActive(false);
         }
     }
 }

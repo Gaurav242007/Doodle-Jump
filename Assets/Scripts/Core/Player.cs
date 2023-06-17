@@ -6,12 +6,14 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
-    public float movementSpeed = 10f;
+    private float movementSpeed = 10f;
     float movement = 0f;
     Rigidbody2D rb;
 
     void Start()
     {
+        if (PlayerPrefs.GetString("2XSpeed", "false") == "true")
+            movementSpeed *= 1.2f;
         rb = GetComponent<Rigidbody2D>();
     }
 

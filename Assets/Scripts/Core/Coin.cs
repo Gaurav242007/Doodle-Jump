@@ -8,10 +8,12 @@ public class Coin : MonoBehaviour
     public ParticleSystem playEffect;
     public ParticleSystem brustEffect;
     public int value;
-    public int Multiplier = 1;
+    public int Multiplier;
 
     void Start()
     {
+        if (PlayerPrefs.GetString("2XCoins", "false") == "true")
+            Multiplier *= 2;
         playEffect.Play();
         gameManager = FindObjectOfType<GameManager>();
     }

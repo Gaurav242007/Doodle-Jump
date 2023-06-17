@@ -7,10 +7,22 @@ public class MainMenu : MonoBehaviour
 {
 
     public GameObject SettingsUi;
+    public GameObject ShopUI;
+    public AudioManager audioManager;
+
+    public GameObject LevelsSelector;
     public string Level01 = "Level01";
+
+    void Start()
+    {
+        SettingsUi.SetActive(false);
+        LevelsSelector.SetActive(false);
+        ShopUI.SetActive(false);
+    }
 
     public void Play()
     {
+        audioManager.PlayOnSelect();
         SceneManager.LoadScene(Level01);
     }
 
@@ -19,13 +31,21 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void OpenSettings()
+    public void CloseSettings(bool open)
     {
-        SettingsUi.SetActive(true);
+        audioManager.PlayOnSelect();
+        SettingsUi.SetActive(open);
     }
 
-    public void CloseSettings()
+    public void OpenLevelSelector(bool open)
     {
-        SettingsUi.SetActive(false);
+        audioManager.PlayOnSelect();
+        LevelsSelector.SetActive(open);
+    }
+
+    public void OpenShop(bool open)
+    {
+        audioManager.PlayOnSelect();
+        ShopUI.SetActive(open);
     }
 }
