@@ -256,7 +256,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 888299338560799796}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8964773523320534025, guid: abd5bba973e908145be362f41c2a0da0, type: 3}
+        m_TargetAssemblyTypeName: Shop, MainMenu
+        m_MethodName: Purcahsed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2215979073666043259
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class ShopItem
         hasPurchasedText.text = "Purchased";
         PlayerPrefs.SetInt("Coins", finalAmount);
         PlayerPrefs.SetString(itemName, "true");
-
+        purchaseBtn.interactable = false;
     }
 
 }

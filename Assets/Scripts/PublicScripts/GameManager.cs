@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static int Score;
     public int startScore = 0;
     public float gameOverDelay = .5f;
+    public float gameWinDelay = 2f;
     public bool hasGameEnded = false;
     public GameObject PauseMenuUi;
     public AudioManager audioManager;
@@ -80,6 +81,11 @@ public class GameManager : MonoBehaviour
         audioManager.PlayOnLevelComplete();
         if (!(levelReached > levelToUnlock))
             PlayerPrefs.SetInt("levelReached", levelToUnlock);
+        StartCoroutine(LoadNextLevel());
+    }
+    IEnumerator LoadNextLevel()
+    {
+        yield return new WaitForSeconds(gameWinDelay);
         SceneManager.LoadScene(NextLevel);
     }
 

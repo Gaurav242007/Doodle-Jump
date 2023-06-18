@@ -886,7 +886,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &539180933
 Canvas:
   m_ObjectHideFlags: 0
@@ -1174,7 +1174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72ffe1b5aa2df643bb4a617b11d097a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
 --- !u!1 &821480685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,8 +2171,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2289,12 +2288,12 @@ MonoBehaviour:
   startCoins: 0
   startScore: 0
   gameOverDelay: 1
+  gameWinDelay: 2
   hasGameEnded: 0
   PauseMenuUi: {fileID: 1820857242}
   audioManager: {fileID: 1326678826}
   currentLevel: 2
   MainMenu: MainMenu
-  levelReached: 0
   levelToUnlock: 2
   NextLevel: MainMenu
 --- !u!114 &1687132537
@@ -2603,8 +2602,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281087487
+  m_fontColor: {r: 1, g: 0.20923723, b: 0.17358488, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

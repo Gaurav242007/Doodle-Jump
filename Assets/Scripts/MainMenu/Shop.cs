@@ -9,6 +9,7 @@ public class Shop : MonoBehaviour
     public ShopItem[] Items;
     public TMP_Text coinText;
     public static int Coins;
+    public AudioManager AudioManager;
 
     void Start()
     {
@@ -34,7 +35,6 @@ public class Shop : MonoBehaviour
             return;
         }
         item.purchaseBtn.onClick.AddListener(item.Purcahase);
-        FindObjectOfType<AudioManager>().Purcahased();
     }
 
     void LockPurchasedBtn(Button btn, TMP_Text _text)
@@ -46,5 +46,10 @@ public class Shop : MonoBehaviour
     void Update()
     {
         coinText.text = Coins.ToString();
+    }
+
+    public void Purcahsed()
+    {
+        FindObjectOfType<AudioManager>().Purcahased();
     }
 }

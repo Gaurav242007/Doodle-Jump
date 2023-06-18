@@ -1174,7 +1174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72ffe1b5aa2df643bb4a617b11d097a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
 --- !u!1 &821480685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,12 +2288,12 @@ MonoBehaviour:
   startCoins: 0
   startScore: 0
   gameOverDelay: 1
+  gameWinDelay: 2
   hasGameEnded: 0
   PauseMenuUi: {fileID: 1820857242}
   audioManager: {fileID: 1326678826}
   currentLevel: 1
   MainMenu: MainMenu
-  levelReached: 0
   levelToUnlock: 2
   NextLevel: Level02
 --- !u!114 &1687132537
