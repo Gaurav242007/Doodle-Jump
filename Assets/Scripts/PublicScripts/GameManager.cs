@@ -106,6 +106,7 @@ public class GameManager : MonoBehaviour
     public void QuitGame()
     {
         audioManager.PlayOnSelect();
+        Time.timeScale = 1f;
         SceneManager.LoadScene(MainMenu);
     }
 

@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private float movementSpeed = 10f;
     float movement = 0f;
     Rigidbody2D rb;
+    public int androidSwapSpeed = 2;
 
     void Start()
     {
@@ -34,11 +35,11 @@ public class Player : MonoBehaviour
 
                 if (swipeDelta.x > 0)
                 {
-                    movement = movementSpeed;
+                    movement = androidSwapSpeed * movementSpeed;
                 }
                 else if (swipeDelta.x < 0)
                 {
-                    movement = -movementSpeed;
+                    movement = -androidSwapSpeed * movementSpeed;
                 }
             }
         }
