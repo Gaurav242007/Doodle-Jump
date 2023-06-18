@@ -12,3 +12,5 @@
 - Pause Menu (Completed)
 - Custom Font (Completed)
 - Main Menu
+- Exciting Levels
+- Shop

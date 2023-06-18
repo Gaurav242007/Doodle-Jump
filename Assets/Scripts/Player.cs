@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        movement = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -35,13 +34,17 @@ public class Player : MonoBehaviour
 
                 if (swipeDelta.x > 0)
                 {
-                    movement = movementSpeed * Time.deltaTime;
+                    movement = movementSpeed;
                 }
                 else if (swipeDelta.x < 0)
                 {
-                    movement = -movementSpeed * Time.deltaTime;
+                    movement = -movementSpeed;
                 }
             }
+        }
+        else
+        {
+            movement = Input.GetAxis("Horizontal") * movementSpeed;
         }
 
     }
